@@ -1,0 +1,118 @@
+body{
+    background-color:rgb(134, 91, 76);
+    background-image: url("./images/background.jpg");
+    font-family: "Lobster", cursive;
+    font-weight: 200;
+    font-style: normal;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul{
+    background-color: blanchedalmond;
+    background-image: url("./images/wood.jpg");
+    list-style-type: none;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav li{
+    padding: 10px;;
+    font-size: 1.1rem;
+}
+li a{
+    color: black;
+    text-decoration: none;
+}
+
+li a:hover{
+    color: rgb(60, 60, 60, 0.9);
+}
+
+h1{
+    font-size: 3rem;
+}
+.board{
+    display: flexbox;
+}
+
+.note {
+    background-color: blanchedalmond;
+    background-image: url("./images/Old\ Paper\ Texture.jpg");
+    display: inline-block;
+    position: relative;
+    margin: 20px;
+    padding: 15px;
+    min-width: 280px; 
+    max-width: 320px;
+    min-height: 175px; 
+    height: auto;
+}
+
+.note-content {
+    font-family: "Dekko", cursive;
+    font-weight: 600;
+}
+
+.pin-button {
+    position: absolute;
+    top: -10px;
+    right: -25px;
+    background-image: url("./images/tape.png");
+    background-color:rgb(205,180,141);
+    border: 1px solid rgb(134, 91, 76);
+    padding: 5px;
+    cursor: pointer;
+    transform: rotate(35deg);
+    width: 80px;
+    opacity: 80%;
+}
+
+.date{
+    font-size: 0.7rem;
+    font-weight: 200;
+    text-align: right;
+    font-family: "Dekko", cursive;
+    opacity: 85%;
+    margin: 3px;
+}
+input{
+    font-family: "Lobster", cursive;
+}
+
+.edit{
+    top: calc(100% - 25px);
+    left: -25px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    padding: 30px;
+    gap: 10px;
+    background-image: url("./images/Old\ Paper\ Texture\ 2.jpg");
+}
+
+input[type=text], textarea{
+    width: 85%;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+input[value=Pin]{
+    background-image: url("./images/tape.png");
+    border: 1px solid rgb(134, 91, 76);
+    width: 60px;
+}
+
+footer{
+   position: fixed;
+   bottom: 0;
+}

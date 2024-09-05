@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs")  %>
+    <main>
+        <h1>Notes</h1>
+        <div class="board">
+            <% for (let note = 0; note < notes.length; note++) {%>
+                <div class="note">
+                    <h2 class="note-title"><%= notes[note].title %></h2>
+                    <p class="note-content"><%= notes[note].content %></p>
+                    <form class="note-form" action="/edit" method="post">
+                        <input type="hidden" name="noteNumber" value="<%= note %>">
+                        <input type="submit" class="pin-button edit" value="Edit">
+                    </form>
+                    <form class="note-form" action="/delete" method="post" onsubmit="return confirm('Do you really want to delete this note?');">
+                        <input type="hidden" name="noteNumber" value="<%= note %>">
+                        <input type="submit" class="pin-button" value="Delete">
+                    </form>
+                    <p class="date">Created: <%= notes[note].date.getHours() %>:<%= notes[note].date.getMinutes() %> <%= notes[note].date.getDate()%>/<%=notes[note].date.getMonth() + 1%>/<%=notes[note].date.getFullYear()%></p>
+                    <% if (locals.notes[note].newDate) {%>
+                        <p class="date">Edited: <%= notes[note].newDate.getHours() %>:<%= notes[note].newDate.getMinutes() %> <%= notes[note].newDate.getDate()%>/<%=notes[note].newDate.getMonth() + 1%>/<%=notes[note].newDate.getFullYear()%></p>
+                    <% } %>    
+                </div>
+            <% } %>
+        </div>
+    </main>
+
+<%- include("partials/footer.ejs") %>

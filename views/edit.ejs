@@ -1,0 +1,13 @@
+<%- include("partials/header.ejs")  %>
+
+<main>
+    <form class="form" action="/edit2" method="post">
+        <label for="title">Note title:</label>
+        <input type="text" id="title" name="title" value="<%= prevTitle %>" required>
+        <label for="content">Note content:</label>
+        <textarea id="content" name="content" required> <%= prevContent %> </textarea>
+        <input type="submit" value="Pin">
+    </form>
+</main>
+
+<%- include("partials/footer.ejs") %>
