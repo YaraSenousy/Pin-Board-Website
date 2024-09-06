@@ -99,6 +99,7 @@ input{
     padding: 30px;
     gap: 10px;
     background-image: url("./images/Old\ Paper\ Texture\ 2.jpg");
+    box-shadow: 5px 5px 5px black;
 }
 
 input[type=text], textarea{
