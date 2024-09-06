@@ -51,6 +51,7 @@ h1{
     max-width: 320px;
     min-height: 175px; 
     height: auto;
+    box-shadow: 10px 5px 5px black;
 }
 
 .note-content {
